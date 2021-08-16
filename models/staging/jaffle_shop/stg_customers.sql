@@ -1,3 +1,4 @@
+
 with customers as (
 
     select
@@ -9,4 +10,4 @@ with customers as (
 
 )
 
-SELECT * FROM customers
+SELECT * from customers

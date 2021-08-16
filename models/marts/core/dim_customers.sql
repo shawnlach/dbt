@@ -1,18 +1,14 @@
-{{ config (
-    materialized="table"
-)}}
+
 
 with customers as (
-
-    select * from {{ ref('stage_customers')}}
-
+        SELECT * FROM {{ref('stg_customers')}}
 ),
 
 orders as (
-
-    select * from {{ ref('stage_orders') }}
-
+    SELECT * FROM {{ref('stg_orders')}}
 ),
+
+
 customer_orders as (
 
     select

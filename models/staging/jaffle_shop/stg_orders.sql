@@ -1,3 +1,4 @@
+
 with orders as (
 
     select
@@ -10,4 +11,4 @@ with orders as (
 
 )
 
-Select * from orders
+SELECT * From orders
