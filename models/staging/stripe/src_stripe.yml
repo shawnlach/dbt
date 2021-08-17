@@ -1,0 +1,20 @@
+version: 2
+
+sources:
+  - name: stripe
+    database: raw
+    tables:
+      - name: payment
+        loaded_at_field: _BATCHED_AT
+        freshness:
+          warn_after: {count: 36, period: hour}
+          error_after: {count: 48, period: hour}
+        columns:
+          - name: Row
+          - name: ID
+          - name: ORDERID
+          - name: PAYMENTMETHOD
+          - name: STATUS    
+          - name: AMOUNT
+          - name: CREATED
+          - name: _BATCHED_AT
