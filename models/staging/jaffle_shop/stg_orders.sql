@@ -7,6 +7,5 @@
         status
 
     from {{source('jaffle_shop','orders')}}
-)
 
-SELECT * From orders
+
